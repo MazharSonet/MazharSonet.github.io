@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Md Mazharul Islam — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent: #6b7280;
+  --accent-2: #374151;
+  --bg: #f5f5f5;
+  --text: #111827;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --border-strong: #d1d5db;
+  --code: #0e1116;
+  --shadow: 0 8px 24px rgba(0,0,0,0.06);
+  --highlight: #fef9c3;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--bg); color:var(--text); font-family: Inter, system-ui, sans-serif;}
+.page-header{text-align:center; padding: 48px 16px; background:#fafafa; border-bottom:1px solid var(--border)}
+.project-name{font-size:2.2rem; margin:0}
+.project-tagline{color:var(--muted); margin-top:8px}
+.header-actions .btn{display:inline-block; margin:4px; padding:8px 14px; border:1px solid var(--border-strong); border-radius:6px; background:#fff; text-decoration:none; color:var(--text)}
+.container{max-width:1100px; margin:20px auto; padding:0 16px; display:grid; grid-template-columns:250px 1fr; gap:20px}
+@media(max-width:960px){.container{grid-template-columns:1fr}}
+.sidenav{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px; position:sticky; top:16px; height:max-content}
+.sidenav h3{margin:0 0 8px; font-size:14px; color:var(--muted)}
+.sidenav .nav{list-style:none; margin:0; padding:0}
+.sidenav .nav li{margin:6px 0}
+.sidenav .nav a{display:block; padding:8px; border-radius:8px; text-decoration:none; color:var(--text)}
+.sidenav .nav a.active{background:#f3f4f6; border:1px solid var(--border-strong)}
+.content{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px; box-shadow:var(--shadow)}
+.content section{margin-bottom:40px; padding-bottom:24px; border-bottom:1px solid var(--border-strong);}
+.content section:last-of-type{border-bottom:none; margin-bottom:0; padding-bottom:0;}
+.highlighted{animation:sectionHighlight 2s ease-out}
+@keyframes sectionHighlight{0%{background-color:var(--highlight);}100%{background-color:transparent;}}
+h2{margin-top:0}
+.list{display:grid; gap:14px}
+.item{padding:12px; border:1px solid var(--border); border-radius:10px}
+.chips{display:flex; flex-wrap:wrap; gap:8px}
+.chip{padding:8px 10px; border:1px solid var(--border); border-radius:999px; background:#fff; font-size:13px}
+footer{text-align:center; color:var(--muted); margin:40px 0}
+</style>
+</head>
+<body>
+<header class="page-header">
+  <h1 class="project-name">Md Mazharul Islam</h1>
+  <p class="project-tagline">Software Engineer — Identity Protection • AI Security • Distributed Systems</p>
+  <p class="header-actions">
+    <a class="btn" href="mailto:sonet.mics@gmail.com">Email</a>
+    <a class="btn" href="https://www.linkedin.com/in/mazhar-sonet/" target="_blank">LinkedIn</a>
+    <a class="btn" href="https://github.com/MazharSonet" target="_blank">GitHub</a>
+    <a class="btn" href="#resume">Download Resume</a>
+  </p>
+</header>
+<div class="container">
+  <aside class="sidenav">
+    <h3>Navigate</h3>
+    <ul class="nav" id="sideNav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects & Publication</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#resume">Resume</a></li>
+    </ul>
+  </aside>
+  <main class="content">
+    <section id="about"><h2>About</h2><p>I build trustworthy identity and AI-native security systems. My work spans designing resilient backend services, implementing risk detection signals, and creating large-scale data pipelines in high-security contexts. I have 5+ years of experience at Microsoft and healthcare tech companies, with contributions in identity protection, fraud detection, and secure code reuse research.</p></section>
+    <section id="experience"><h2>Experience</h2><div class="list">
+      <div class="item"><strong>Microsoft — Software Engineer (Vancouver, CA · Jun 2023 – Feb 2025)</strong><ul><li>Contributed to Secure Future Initiative to strengthen customer data safeguards.</li><li>Migrated 7 Identity Protection services to Managed Service Identity authentication.</li><li>Built PySpark Azure Synapse pipeline validating ~144M IP geolocation rows daily.</li><li>Developed region-aware release pipelines, TSGs, and scaling strategies using Azure DevOps & PilotFish.</li><li>Implemented anomaly detection and availability monitors using Geneva metrics.</li></ul></div>
+      <div class="item"><strong>Microsoft — Software Engineer (Redmond, USA · Jul 2022 – Jun 2023)</strong><ul><li>Maintained Identity Protection services serving 42.6M+ customers at 99.99% availability.</li><li>Reduced empty IP-location detection time from 120 to 45 minutes through Geneva monitoring enhancements.</li><li>Developed LSM jobs in Geneva Actions to optimize data upload and runtime configuration.</li></ul></div>
+      <div class="item"><strong>Edifecs — Associate Implementation Consultant (Bellevue, USA · May 2021 – Jun 2022)</strong><ul><li>Built features for XEngine: validation, transformation, and conversion of healthcare transaction data.</li><li>Developed APIs and DRL rules for Encounter Management in compliance with HIPAA standards.</li></ul></div>
+      <div class="item"><strong>Synesis IT — Senior / Software Engineer (Dhaka, BD · May 2016 – Jul 2018)</strong><ul><li>Migrated ~110M national census records to a new platform.</li><li>Developed HR, payroll, and budget management systems in .NET/Entity Framework.</li><li>Optimized REST APIs to handle 500 TPS on Oracle 12c backend.</li></ul></div>
+    </div></section>
+    <section id="skills"><h2>Skills</h2><div class="chips"><span class="chip">Python</span><span class="chip">C#</span><span class="chip">Java</span><span class="chip">C++</span><span class="chip">PySpark</span><span class="chip">.NET</span><span class="chip">Spring Boot</span><span class="chip">JavaScript</span><span class="chip">Flask</span><span class="chip">Django</span><span class="chip">Terraform</span><span class="chip">Azure DevOps</span><span class="chip">Synapse</span><span class="chip">Cosmos DB</span><span class="chip">MS SQL</span><span class="chip">Redis</span><span class="chip">Docker</span><span class="chip">AWS</span><span class="chip">REST APIs</span></div></section>
+    <section id="projects"><h2>Projects & Publication</h2><div class="item"><strong>SoCeR: Source Code Recommendation for Code Reuse (IEEE COMPSAC 2020)</strong><p>Developed an unsupervised NLP-based source code recommendation system to improve secure code reuse and reduce vulnerabilities from ad-hoc copy-paste practices. Features included source code search, summarization, and reformulated query suggestions. <a href="https://ieeexplore.ieee.org/abstract/document/9202820/" target="_blank">Paper</a></p></div><div class="item"><strong>Secure Code Summarizer</strong><p>Flask application and pipelines to summarize source code securely and promote safe code reuse in development teams.</p></div></section>
+    <section id="education"><h2>Education</h2><p><strong>Missouri State University</strong> — M.S. in Computer Science (2018–2020), specializing in secure code reuse using NLP.<br><strong>BUET</strong> — B.Sc. in Computer Science & Engineering (2011–2016)</p></section>
+    <section id="contact"><h2>Contact</h2><p><strong>Email:</strong> <a href="mailto:sonet.mics@gmail.com">sonet.mics@gmail.com</a><br><strong>Phone:</strong> <a href="tel:+14174027532">+1 (417) 402-7532</a><br><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mazhar-sonet/" target="_blank">/in/mazhar-sonet</a><br><strong>GitHub:</strong> <a href="https://github.com/MazharSonet" target="_blank">@MazharSonet</a></p></section>
+    <section id="resume"><h2>Resume</h2><p>Prefer a PDF? <a href="assets/Mazhar-Resume.pdf" download>Download my resume</a>.</p></section>
+  </main>
+</div>
+<footer>© <span id="year"></span> Md Mazharul Islam · Built for GitHub Pages</footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const sections=document.querySelectorAll('main section[id]');
+const navLinks=Array.from(document.querySelectorAll('#sideNav a'));
+const byId=id=>navLinks.find(a=>a.getAttribute('href')===`#${id}`);
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{const link=byId(entry.target.id||'');if(!link)return;if(entry.isIntersecting){navLinks.forEach(a=>a.classList.remove('active'));link.classList.add('active');}});},{rootMargin:'-40% 0px -55% 0px',threshold:0.1});
+sections.forEach(sec=>observer.observe(sec));
+navLinks.forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const id=a.getAttribute('href').slice(1);const target=document.getElementById(id);if(target){target.scrollIntoView({behavior:'smooth',block:'start'});target.classList.add('highlighted');setTimeout(()=>target.classList.remove('highlighted'),2000);}});});
+</script>
+</body>
+</html>
