@@ -250,6 +250,12 @@ section{scroll-margin-top:64px; padding:28px 0}
 }
 .link-btn:hover{text-decoration:none; background:var(--accent); color:var(--on-accent)}
 .link-btn svg{width:16px; height:16px}
+.card.upcoming{border-style:dashed; box-shadow:none; background:color-mix(in srgb,var(--card) 70%,transparent)}
+.badge{
+  display:inline-flex; align-items:center; gap:6px; padding:3px 10px; border-radius:999px; white-space:nowrap;
+  font-size:.75rem; font-weight:600; color:var(--muted); background:var(--accent-soft); border:1px solid var(--border);
+}
+.badge::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--accent)}
 
 /* Tags */
 .tags{display:flex; flex-wrap:wrap; gap:8px; list-style:none; padding:0; margin:12px 0 0}
@@ -512,7 +518,27 @@ footer{padding:28px 0 calc(40px + env(safe-area-inset-bottom))}
               </a>
             </div>
           </article>
-          <!-- Agentic RAG project goes here when ready -->
+          <!-- Upcoming projects: when one launches, replace the badge with dates and add a Live demo link -->
+          <article class="card project upcoming">
+            <div class="job-head">
+              <h3>AI Compliance Assistant</h3>
+              <span class="badge">In development</span>
+            </div>
+            <p>An agentic RAG assistant that helps teams understand regulatory obligations for AI systems, with answers cited back to source text.</p>
+            <ul class="tags" aria-label="Tech stack">
+              <li>Python</li><li>LLM</li><li>Agentic RAG</li><li>Evaluation</li>
+            </ul>
+          </article>
+          <article class="card project upcoming">
+            <div class="job-head">
+              <h3>Patent Prior-Art Search</h3>
+              <span class="badge">In development</span>
+            </div>
+            <p>An agentic RAG tool that turns an invention description into a structured prior-art screening report.</p>
+            <ul class="tags" aria-label="Tech stack">
+              <li>Python</li><li>LLM</li><li>Agentic RAG</li><li>Vector Search</li>
+            </ul>
+          </article>
         </div>
       </div>
 
