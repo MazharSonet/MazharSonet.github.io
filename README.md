@@ -1,56 +1,32 @@
-# Md Mazharul Islam — Minimal Portfolio
+# Md Mazharul Islam — Portfolio
 
-Single-file, GitHub Pages–ready site.
+Personal portfolio site for Md Mazharul Islam, Software Engineer (Backend, Distributed Systems & Full-Stack) based in Vancouver, BC.
 
-## Quick Start (Personal site: `<username>.github.io`)
+**Live site:** [mazharsonet.github.io](https://mazharsonet.github.io)
 
-1. **Create a repo** on GitHub named exactly: `<your-username>.github.io` (e.g., `MazharSonet.github.io`).
-2. Download this repo zip and extract it. Then push the files to that repo:
+## What's on the site
 
-```bash
-git init
-git branch -M main
-git add .
-git commit -m "Initial commit: portfolio site"
-git remote add origin https://github.com/<your-username>/<your-username>.github.io.git
-git push -u origin main
-```
+- **About:** 6 years building and operating distributed backend services, most recently at Microsoft
+- **Experience:** Microsoft (Vancouver and Redmond), Edifecs, MuSyC Lab at Missouri State University, Synesis IT
+- **Projects (AI/LLM & Research):** Interview Coach, an AI-powered interview practice platform, and SoCeR (IEEE COMPSAC 2020)
+- **Skills and Education**
+- **Resume:** downloadable PDF
 
-3. Visit `https://<your-username>.github.io` after ~30–60 seconds.
+The layout works on phones, tablets and desktops, and supports light and dark mode.
 
-## Alternative: Project site (any repo name)
+## Files
 
-1. Create a repo with any name (e.g., `portfolio`).
-2. Push the files:
-```bash
-git init
-git branch -M main
-git add .
-git commit -m "Initial commit: portfolio site"
-git remote add origin https://github.com/<your-username>/portfolio.git
-git push -u origin main
-```
-3. In **Settings → Pages**:
-   - **Source:** `Deploy from a branch`
-   - **Branch:** `main` / `/root`
-4. Your site will be served at `https://<your-username>.github.io/portfolio/`.
+| File | Purpose |
+|---|---|
+| `index.html` | The whole site: markup, styles and scripts in one file |
+| `assets/Mazhar-Resume.pdf` | Resume linked from the Download Resume button |
+| `assets/profile.jpg` | Profile photo (480×480) |
 
-## Custom Domain (optional)
+There's no build step, and the site is served directly by GitHub Pages from the `main` branch.
 
-1. Add your domain in **Settings → Pages → Custom domain** (e.g., `mazharsonet.dev`).
-2. Create DNS records:
-   - `A` records → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - `AAAA` records (optional) → `2606:50c0:8000::153`, `::/109::153`, `::/110::153`, `::/111::153`
-3. (Optional) Add a `CNAME` file at the repo root containing only your domain:
+## Updating
 
-```
-mazharsonet.dev
-```
-
-## Resume PDF
-
-Your resume is referenced at `assets/Mazhar-Resume.pdf`. Replace that file if you update your resume.
-
-## Local Preview
-
-Just open `index.html` in a browser. No build step, no tooling required.
+- **Preview locally:** open `index.html` in a browser.
+- **Resume:** replace `assets/Mazhar-Resume.pdf` with the new export, keeping the same file name.
+- **Content:** edit the sections in `index.html`. To add a project, copy an existing `<article class="card project">` block. The marker comment in the AI/LLM group shows where the next project goes.
+- **Publish:** commit and push to `main`. GitHub Pages updates the live site within a minute or two.

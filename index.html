@@ -2,100 +2,607 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Md Mazharul Islam — Software Engineer</title>
+<meta name="description" content="Md Mazharul Islam — Software Engineer in Vancouver, BC. 6 years building distributed backend services, most recently at Microsoft. Backend, distributed systems and full-stack." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Md Mazharul Islam — Software Engineer" />
+<meta property="og:description" content="Backend, Distributed Systems & Full-Stack. 6 years building distributed backend services, most recently at Microsoft. Based in Vancouver, BC." />
+<meta property="og:url" content="https://mazharsonet.github.io/" />
+<meta property="og:image" content="https://mazharsonet.github.io/assets/profile.jpg" />
+<meta name="twitter:card" content="summary" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EMI%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+// Apply saved theme before first paint to avoid a flash
+(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}document.documentElement.classList.add('js');})();
+</script>
 <style>
 :root{
-  --accent: #6b7280;
-  --accent-2: #374151;
-  --bg: #f5f5f5;
-  --text: #111827;
-  --muted: #6b7280;
-  --card: #ffffff;
-  --border: #e5e7eb;
-  --border-strong: #d1d5db;
-  --code: #0e1116;
-  --shadow: 0 8px 24px rgba(0,0,0,0.06);
-  --highlight: #fef9c3;
+  --accent:#2563eb;
+  --accent-strong:#1d4ed8;
+  --accent-soft:rgba(37,99,235,.08);
+  --accent-ring:rgba(37,99,235,.35);
+  --bg:#f6f8fb;
+  --bg-2:#eef2f8;
+  --dot:rgba(15,23,42,.07);
+  --text:#0f172a;
+  --muted:#475569;
+  --faint:#64748b;
+  --card:#ffffff;
+  --border:#e2e8f0;
+  --shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.06);
+  --shadow-hover:0 2px 4px rgba(15,23,42,.05),0 16px 40px rgba(37,99,235,.12);
+  --on-accent:#ffffff;
+  color-scheme:light;
 }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --accent:#60a5fa;
+    --accent-strong:#93c5fd;
+    --accent-soft:rgba(96,165,250,.10);
+    --accent-ring:rgba(96,165,250,.40);
+    --bg:#0b1120;
+    --bg-2:#0f172a;
+    --dot:rgba(148,163,184,.08);
+    --text:#e2e8f0;
+    --muted:#a3b1c6;
+    --faint:#8a9ab0;
+    --card:#111a2e;
+    --border:#1e293b;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+    --shadow-hover:0 2px 4px rgba(0,0,0,.3),0 16px 40px rgba(96,165,250,.12);
+    --on-accent:#0b1120;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --accent:#60a5fa;
+  --accent-strong:#93c5fd;
+  --accent-soft:rgba(96,165,250,.10);
+  --accent-ring:rgba(96,165,250,.40);
+  --bg:#0b1120;
+  --bg-2:#0f172a;
+  --dot:rgba(148,163,184,.08);
+  --text:#e2e8f0;
+  --muted:#a3b1c6;
+  --faint:#8a9ab0;
+  --card:#111a2e;
+  --border:#1e293b;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  --shadow-hover:0 2px 4px rgba(0,0,0,.3),0 16px 40px rgba(96,165,250,.12);
+  --on-accent:#0b1120;
+  color-scheme:dark;
+}
+
 *{box-sizing:border-box}
-body{margin:0; background:var(--bg); color:var(--text); font-family: Inter, system-ui, sans-serif;}
-.page-header{text-align:center; padding: 48px 16px; background:#fafafa; border-bottom:1px solid var(--border)}
-.project-name{font-size:2.2rem; margin:0}
-.project-tagline{color:var(--muted); margin-top:8px}
-.header-actions .btn{display:inline-block; margin:4px; padding:8px 14px; border:1px solid var(--border-strong); border-radius:6px; background:#fff; text-decoration:none; color:var(--text)}
-.container{max-width:1100px; margin:20px auto; padding:0 16px; display:grid; grid-template-columns:250px 1fr; gap:20px}
-@media(max-width:960px){.container{grid-template-columns:1fr}}
-.sidenav{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px; position:sticky; top:16px; height:max-content}
-.sidenav h3{margin:0 0 8px; font-size:14px; color:var(--muted)}
-.sidenav .nav{list-style:none; margin:0; padding:0}
-.sidenav .nav li{margin:6px 0}
-.sidenav .nav a{display:block; padding:8px; border-radius:8px; text-decoration:none; color:var(--text)}
-.sidenav .nav a.active{background:#f3f4f6; border:1px solid var(--border-strong)}
-.content{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px; box-shadow:var(--shadow)}
-.content section{margin-bottom:40px; padding-bottom:24px; border-bottom:1px solid var(--border-strong);}
-.content section:last-of-type{border-bottom:none; margin-bottom:0; padding-bottom:0;}
-.highlighted{animation:sectionHighlight 2s ease-out}
-@keyframes sectionHighlight{0%{background-color:var(--highlight);}100%{background-color:transparent;}}
-h2{margin-top:0}
-.list{display:grid; gap:14px}
-.item{padding:12px; border:1px solid var(--border); border-radius:10px}
-.chips{display:flex; flex-wrap:wrap; gap:8px}
-.chip{padding:8px 10px; border:1px solid var(--border); border-radius:999px; background:#fff; font-size:13px}
-footer{text-align:center; color:var(--muted); margin:40px 0}
+html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0; color:var(--text); font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:clamp(15px,.9rem + .2vw,16.5px); line-height:1.65;
+  background-color:var(--bg);
+  background-image:
+    radial-gradient(var(--dot) 1px,transparent 1px),
+    linear-gradient(160deg,var(--bg) 0%,var(--bg-2) 100%);
+  background-size:22px 22px,100% 100%;
+  background-attachment:fixed;
+  overflow-x:hidden;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline; text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:6px}
+img{max-width:100%; display:block}
+h1,h2,h3,h4{line-height:1.25; margin:0}
+ul{margin:0}
+.skip{position:absolute; left:-999px; top:8px; background:var(--card); padding:10px 14px; border-radius:8px; z-index:100}
+.skip:focus{left:8px}
+
+/* ---------- Layout ---------- */
+.layout{
+  max-width:1200px; margin:0 auto;
+  padding:0 max(16px,env(safe-area-inset-left)) 0 max(16px,env(safe-area-inset-right));
+  display:grid; grid-template-columns:minmax(0,1fr);
+}
+.side{display:contents}
+main{min-width:0}
+
+/* ---------- Hero / side panel ---------- */
+.hero{position:relative; padding:56px 0 28px; display:grid; grid-template-columns:minmax(0,1fr); gap:18px; justify-items:center; text-align:center}
+.avatar{
+  width:clamp(112px,28vw,148px); aspect-ratio:1; border-radius:50%; object-fit:cover;
+  border:4px solid var(--card); box-shadow:0 0 0 2px var(--accent-ring),var(--shadow);
+  background:var(--accent-soft);
+}
+.hero h1{font-size:clamp(1.9rem,1.4rem + 2vw,2.6rem); font-weight:800; letter-spacing:-.02em}
+.headline{margin:6px 0 0; font-size:clamp(1rem,.95rem + .3vw,1.15rem); font-weight:600; color:var(--text)}
+.headline .amp{color:var(--accent)}
+.nowrap{white-space:nowrap}
+.location{margin:10px 0 0; color:var(--muted); font-size:.95rem; display:flex; flex-wrap:wrap; gap:4px 10px; justify-content:center}
+.location span{display:inline-block}
+.location svg{width:16px; height:16px; margin-right:6px; vertical-align:-3px; color:var(--accent)}
+.actions{display:flex; flex-wrap:wrap; gap:10px; justify-content:center}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:44px; padding:10px 18px;
+  border-radius:10px; font-weight:600; font-size:.95rem; border:1px solid var(--border);
+  background:var(--card); color:var(--text); transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease,background .15s ease;
+}
+.btn:hover{text-decoration:none; border-color:var(--accent); transform:translateY(-1px); box-shadow:var(--shadow)}
+.btn svg{width:18px; height:18px}
+.btn-primary{background:var(--accent); border-color:var(--accent); color:var(--on-accent)}
+.btn-primary:hover{background:var(--accent-strong); border-color:var(--accent-strong)}
+.social{display:flex; gap:8px; list-style:none; padding:0; justify-content:center}
+.social a{
+  display:inline-flex; width:44px; height:44px; align-items:center; justify-content:center;
+  border-radius:10px; color:var(--muted); border:1px solid transparent; transition:color .15s,border-color .15s,background .15s;
+}
+.social a:hover{color:var(--accent); border-color:var(--border); background:var(--card)}
+.social svg{width:22px; height:22px}
+.theme-toggle{
+  position:absolute; top:16px; right:0; width:44px; height:44px; border-radius:10px; cursor:pointer;
+  border:1px solid var(--border); background:var(--card); color:var(--muted); display:inline-flex; align-items:center; justify-content:center;
+}
+.theme-toggle:hover{color:var(--accent); border-color:var(--accent)}
+.theme-toggle svg{width:20px; height:20px}
+.theme-toggle .moon{display:none}
+:root[data-theme="dark"] .theme-toggle .sun{display:none}
+:root[data-theme="dark"] .theme-toggle .moon{display:block}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .theme-toggle .sun{display:none}
+  :root:not([data-theme="light"]) .theme-toggle .moon{display:block}
+}
+
+/* ---------- Section nav ---------- */
+.nav{
+  position:sticky; top:0; z-index:20; margin:0 -16px; padding:0 16px;
+  background:var(--bg);
+  background:color-mix(in srgb,var(--bg) 85%,transparent);
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav ul{position:relative; list-style:none; padding:0; margin:0 auto; max-width:720px; display:flex; gap:4px; overflow-x:auto; scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a{
+  display:flex; align-items:center; min-height:48px; padding:0 12px; white-space:nowrap;
+  color:var(--muted); font-weight:600; font-size:.9rem; border-bottom:2px solid transparent;
+}
+.nav a:hover{color:var(--text); text-decoration:none}
+.nav a.active{color:var(--accent); border-bottom-color:var(--accent)}
+.nav .num{display:none}
+
+/* ---------- Content ---------- */
+main{padding:24px 0 8px}
+section{scroll-margin-top:64px; padding:28px 0}
+.section-label{display:flex; align-items:center; gap:10px; margin-bottom:18px}
+.section-label .num{font-size:.8rem; font-weight:700; color:var(--accent); letter-spacing:.08em}
+.section-label h2{font-size:clamp(1.3rem,1.1rem + .8vw,1.6rem); font-weight:700; letter-spacing:-.01em}
+.section-label::after{content:""; flex:1; height:1px; background:var(--border); margin-left:6px}
+.prose p{margin:0 0 12px; color:var(--muted); max-width:70ch}
+.prose p:last-child{margin-bottom:0}
+.prose strong{color:var(--text); font-weight:600}
+
+.card{
+  background:var(--card); border:1px solid var(--border); border-radius:14px; padding:clamp(16px,3vw,22px);
+  box-shadow:var(--shadow); transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.card:hover{transform:translateY(-2px); box-shadow:var(--shadow-hover); border-color:var(--accent-ring)}
+
+/* Timeline */
+.timeline{list-style:none; padding:0 0 0 22px; margin:0; position:relative; display:grid; gap:16px}
+.timeline::before{content:""; position:absolute; left:5px; top:10px; bottom:10px; width:2px; background:var(--border); border-radius:2px}
+.timeline > li{position:relative}
+.timeline > li::before{
+  content:""; position:absolute; left:-22px; top:24px; width:12px; height:12px; border-radius:50%;
+  background:var(--card); border:2px solid var(--accent); box-shadow:0 0 0 4px var(--bg);
+}
+.job-head{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:2px 16px}
+.job-head h3{font-size:1.05rem; font-weight:700}
+.job-head h4{font-size:1rem; font-weight:600}
+.org{margin:2px 0 0; color:var(--muted); font-size:.93rem}
+.org em{color:var(--faint)}
+.dates{color:var(--faint); font-size:.85rem; font-weight:500; white-space:nowrap; font-variant-numeric:tabular-nums}
+.bullets{padding-left:18px; margin-top:10px; color:var(--muted)}
+.bullets li{margin:5px 0; padding-left:2px}
+.bullets li::marker{color:var(--accent)}
+.bullets strong{color:var(--text); font-weight:600}
+.roles{display:grid; gap:18px; margin-top:14px}
+.role{padding-left:14px; border-left:2px solid var(--accent-soft)}
+.role .bullets{margin-top:8px}
+
+/* Projects */
+.group-title{font-size:.8rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--faint); margin:0 0 12px}
+.group + .group{margin-top:26px}
+.projects{display:grid; gap:16px}
+.project p{margin:10px 0 0; color:var(--muted)}
+.project .bullets{margin-top:10px}
+.project-links{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+.link-btn{
+  display:inline-flex; align-items:center; gap:6px; min-height:40px; padding:8px 14px; border-radius:8px;
+  font-weight:600; font-size:.9rem; background:var(--accent-soft); color:var(--accent);
+}
+.link-btn:hover{text-decoration:none; background:var(--accent); color:var(--on-accent)}
+.link-btn svg{width:16px; height:16px}
+
+/* Tags */
+.tags{display:flex; flex-wrap:wrap; gap:8px; list-style:none; padding:0; margin:12px 0 0}
+.tags li{
+  padding:5px 11px; border-radius:999px; font-size:.82rem; font-weight:500;
+  background:var(--accent-soft); color:var(--text); border:1px solid var(--accent-ring);
+}
+.skills{display:grid; gap:14px}
+.skills h3{font-size:.95rem; font-weight:700}
+.skills .tags{margin-top:10px}
+
+/* Education */
+.edu{display:grid; gap:14px}
+.edu p{margin:4px 0 0; color:var(--muted)}
+
+/* Footer */
+footer{padding:28px 0 calc(40px + env(safe-area-inset-bottom))}
+.cta{text-align:center; padding:clamp(22px,4vw,32px)}
+.cta h2{font-size:clamp(1.2rem,1.05rem + .6vw,1.45rem); font-weight:700}
+.cta p{margin:8px auto 18px; color:var(--muted); max-width:52ch}
+.copy{text-align:center; color:var(--faint); font-size:.85rem; margin-top:22px}
+
+/* Reveal on scroll (only when JS is running) */
+.js .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1; transform:none}
+@media (prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1; transform:none; transition:none}
+  .card,.btn{transition:none}
+  .card:hover,.btn:hover{transform:none}
+}
+
+/* ---------- Tablet (640–1023): photo beside the name ---------- */
+@media (min-width:640px){
+  .layout{padding-left:max(28px,env(safe-area-inset-left)); padding-right:max(28px,env(safe-area-inset-right))}
+  .nav{margin:0 -28px; padding:0 28px}
+  .hero{
+    grid-template-columns:auto minmax(0,1fr); justify-items:start; text-align:left; column-gap:28px; align-items:center;
+    padding-top:64px; max-width:720px; width:100%; margin:0 auto;
+  }
+  .hero .avatar{grid-row:span 3}
+  .location,.actions,.social{justify-content:flex-start}
+  .actions,.social{grid-column:2}
+  main,footer{max-width:720px; width:100%; margin:0 auto}
+}
+
+/* ---------- Desktop & iPad landscape (≥1024): split screen ---------- */
+@media (min-width:1024px){
+  .layout{grid-template-columns:minmax(340px,5fr) 7fr; column-gap:clamp(40px,5vw,72px); padding-left:40px; padding-right:40px}
+  .side{
+    grid-column:1; grid-row:1 / span 2; align-self:start;
+    display:flex; flex-direction:column; position:sticky; top:0; height:100vh; height:100dvh;
+    padding:72px 0 48px; overflow-y:auto;
+  }
+  .hero{display:flex; flex-direction:column; align-items:flex-start; text-align:left; padding:0; gap:16px; margin:0; max-width:none}
+  .theme-toggle{top:0}
+  .nav{position:static; margin:36px 0 0; padding:0; background:none; backdrop-filter:none; -webkit-backdrop-filter:none; border:0}
+  .nav ul{flex-direction:column; gap:0; overflow:visible; margin:0; max-width:none}
+  .nav a{min-height:40px; padding:0; gap:14px; border:0; font-size:.82rem; text-transform:uppercase; letter-spacing:.1em}
+  .nav a::before{content:""; width:28px; height:1px; background:var(--faint); transition:width .2s ease,background .2s ease}
+  .nav a:hover::before{width:48px; background:var(--text)}
+  .nav a.active::before{width:64px; height:2px; background:var(--accent)}
+  .nav .num{display:inline; color:var(--faint); font-weight:600}
+  .nav a.active .num{color:var(--accent)}
+  .side-foot{margin-top:auto; padding-top:28px}
+  main{grid-column:2; grid-row:1; padding:56px 0 0; max-width:none; margin:0}
+  footer{grid-column:2; max-width:none; margin:0}
+  section{scroll-margin-top:24px}
+  .projects{grid-template-columns:1fr}
+}
+@media (min-width:1024px) and (max-height:700px){
+  .side{padding-top:40px}
+  .nav{margin-top:20px}
+}
+.side-foot{display:grid; gap:14px; justify-items:center}
+@media (min-width:640px){.side-foot{justify-items:start}}
+@media (max-width:1023px){
+  .side-foot{display:none}
+}
+
+/* ---------- Print ---------- */
+@media print{
+  body{background:#fff; color:#000}
+  .nav,.theme-toggle,.actions,.side-foot,.cta .actions,.skip{display:none !important}
+  .layout{display:block; max-width:none; padding:0}
+  .side{display:block; position:static; height:auto; padding:0}
+  .card{box-shadow:none; break-inside:avoid}
+  .js .reveal{opacity:1; transform:none}
+  a{color:#000}
+}
 </style>
 </head>
 <body>
-<header class="page-header">
-  <h1 class="project-name">Md Mazharul Islam</h1>
-  <p class="project-tagline">Software Engineer — Identity Protection • AI Security • Distributed Systems</p>
-  <p class="header-actions">
-    <a class="btn" href="mailto:sonet.mics@gmail.com">Email</a>
-    <a class="btn" href="https://www.linkedin.com/in/mazhar-sonet/" target="_blank">LinkedIn</a>
-    <a class="btn" href="https://github.com/MazharSonet" target="_blank">GitHub</a>
-    <a class="btn" href="#resume">Download Resume</a>
-  </p>
-</header>
-<div class="container">
-  <aside class="sidenav">
-    <h3>Navigate</h3>
-    <ul class="nav" id="sideNav">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects & Publication</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#resume">Resume</a></li>
-    </ul>
-  </aside>
-  <main class="content">
-    <section id="about"><h2>About</h2><p>I build trustworthy identity and AI-native security systems. My work spans designing resilient backend services, implementing risk detection signals, and creating large-scale data pipelines in high-security contexts. I have 5+ years of experience at Microsoft and healthcare tech companies, with contributions in identity protection, fraud detection, and secure code reuse research.</p></section>
-    <section id="experience"><h2>Experience</h2><div class="list">
-      <div class="item"><strong>Microsoft — Software Engineer (Vancouver, CA · Jun 2023 – Feb 2025)</strong><ul><li>Contributed to Secure Future Initiative to strengthen customer data safeguards.</li><li>Migrated 7 Identity Protection services to Managed Service Identity authentication.</li><li>Built PySpark Azure Synapse pipeline validating ~144M IP geolocation rows daily.</li><li>Developed region-aware release pipelines, TSGs, and scaling strategies using Azure DevOps & PilotFish.</li><li>Implemented anomaly detection and availability monitors using Geneva metrics.</li></ul></div>
-      <div class="item"><strong>Microsoft — Software Engineer (Redmond, USA · Jul 2022 – Jun 2023)</strong><ul><li>Maintained Identity Protection services serving 42.6M+ customers at 99.99% availability.</li><li>Reduced empty IP-location detection time from 120 to 45 minutes through Geneva monitoring enhancements.</li><li>Developed LSM jobs in Geneva Actions to optimize data upload and runtime configuration.</li></ul></div>
-      <div class="item"><strong>Edifecs — Associate Implementation Consultant (Bellevue, USA · May 2021 – Jun 2022)</strong><ul><li>Built features for XEngine: validation, transformation, and conversion of healthcare transaction data.</li><li>Developed APIs and DRL rules for Encounter Management in compliance with HIPAA standards.</li></ul></div>
-      <div class="item"><strong>Synesis IT — Senior / Software Engineer (Dhaka, BD · May 2016 – Jul 2018)</strong><ul><li>Migrated ~110M national census records to a new platform.</li><li>Developed HR, payroll, and budget management systems in .NET/Entity Framework.</li><li>Optimized REST APIs to handle 500 TPS on Oracle 12c backend.</li></ul></div>
-    </div></section>
-    <section id="skills"><h2>Skills</h2><div class="chips"><span class="chip">Python</span><span class="chip">C#</span><span class="chip">Java</span><span class="chip">C++</span><span class="chip">PySpark</span><span class="chip">.NET</span><span class="chip">Spring Boot</span><span class="chip">JavaScript</span><span class="chip">Flask</span><span class="chip">Django</span><span class="chip">Terraform</span><span class="chip">Azure DevOps</span><span class="chip">Synapse</span><span class="chip">Cosmos DB</span><span class="chip">MS SQL</span><span class="chip">Redis</span><span class="chip">Docker</span><span class="chip">AWS</span><span class="chip">REST APIs</span></div></section>
-    <section id="projects"><h2>Projects & Publication</h2><div class="item"><strong>SoCeR: Source Code Recommendation for Code Reuse (IEEE COMPSAC 2020)</strong><p>Developed an unsupervised NLP-based source code recommendation system to improve secure code reuse and reduce vulnerabilities from ad-hoc copy-paste practices. Features included source code search, summarization, and reformulated query suggestions. <a href="https://ieeexplore.ieee.org/abstract/document/9202820/" target="_blank">Paper</a></p></div><div class="item"><strong>Secure Code Summarizer</strong><p>Flask application and pipelines to summarize source code securely and promote safe code reuse in development teams.</p></div></section>
-    <section id="education"><h2>Education</h2><p><strong>Missouri State University</strong> — M.S. in Computer Science (2018–2020), specializing in secure code reuse using NLP.<br><strong>BUET</strong> — B.Sc. in Computer Science & Engineering (2011–2016)</p></section>
-    <section id="contact"><h2>Contact</h2><p><strong>Email:</strong> <a href="mailto:sonet.mics@gmail.com">sonet.mics@gmail.com</a><br><strong>Phone:</strong> <a href="tel:+14174027532">+1 (417) 402-7532</a><br><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mazhar-sonet/" target="_blank">/in/mazhar-sonet</a><br><strong>GitHub:</strong> <a href="https://github.com/MazharSonet" target="_blank">@MazharSonet</a></p></section>
-    <section id="resume"><h2>Resume</h2><p>Prefer a PDF? <a href="assets/Mazhar-Resume.pdf" download>Download my resume</a>.</p></section>
+<a class="skip" href="#about">Skip to content</a>
+<div class="layout">
+  <div class="side">
+    <header class="hero">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <img class="avatar" src="assets/profile.jpg" width="148" height="148" alt="Md Mazharul Islam" />
+      <div>
+        <h1>Md Mazharul Islam</h1>
+        <p class="headline">Software Engineer — Backend, Distributed Systems <span class="nowrap"><span class="amp">&amp;</span> Full-Stack</span></p>
+        <p class="location">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Vancouver, BC, Canada</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Authorized to work in Canada for any employer</span>
+        </p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="assets/Mazhar-Resume.pdf" download="Md_Mazharul_Islam_Resume.pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+          Download Resume
+        </a>
+      </div>
+      <ul class="social" aria-label="Contact links">
+        <li><a href="mailto:sonet.mics@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/mazhar-sonet/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></li>
+        <li><a href="https://github.com/MazharSonet" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg></a></li>
+      </ul>
+    </header>
+
+    <nav class="nav" aria-label="Sections">
+      <ul id="sideNav">
+        <li><a href="#about"><span class="num">01</span>About</a></li>
+        <li><a href="#experience"><span class="num">02</span>Experience</a></li>
+        <li><a href="#projects"><span class="num">03</span>Projects</a></li>
+        <li><a href="#skills"><span class="num">04</span>Skills</a></li>
+        <li><a href="#education"><span class="num">05</span>Education</a></li>
+      </ul>
+    </nav>
+
+    <div class="side-foot">
+      <p class="dates">Open to backend &amp; full-stack roles in Canada</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <section id="about" class="reveal">
+      <div class="section-label"><span class="num">01</span><h2>About</h2></div>
+      <div class="prose">
+        <p>I'm a software engineer with <strong>6 years</strong> building and operating distributed backend services, most recently at <strong>Microsoft</strong>.</p>
+        <p>I've built high-availability identity and security systems at consumer scale, owning services end to end, including on-call. My production cloud experience spans distributed data stores, event streaming, caching, CI/CD and observability.</p>
+        <p>Lately I've been building full-stack, LLM-powered applications. <a href="#projects">See my projects</a>.</p>
+      </div>
+    </section>
+
+    <section id="experience" class="reveal">
+      <div class="section-label"><span class="num">02</span><h2>Experience</h2></div>
+      <ol class="timeline">
+        <li class="card">
+          <div class="job-head">
+            <h3>Microsoft Corporation</h3>
+            <span class="dates">Jul 2022 – Feb 2025</span>
+          </div>
+          <div class="roles">
+            <div class="role">
+              <div class="job-head">
+                <div>
+                  <h4>Software Engineer</h4>
+                  <p class="org">Vancouver, Canada <em>(Internal Relocation)</em></p>
+                </div>
+                <span class="dates">Jun 2023 – Feb 2025</span>
+              </div>
+              <ul class="bullets">
+                <li>Contributed to Microsoft's company-wide Secure Future Initiative to safeguard customer data from bad actors</li>
+                <li>Migrated <strong>7 Identity Protection services</strong> from key/certificate-based to Managed Service Identity (MSI) authentication</li>
+                <li>Built an Azure Synapse pipeline (PySpark) validating <strong>~144M IP geolocation records daily</strong></li>
+                <li>Cut <strong>~2 hours from each deployment cycle</strong> by automating environment configuration and region-wise rollouts for bi-weekly releases across 7 regions and 50+ VMs (Azure DevOps, PilotFish)</li>
+                <li>Wrote the TSG for redirecting traffic to alternate regions during incidents, adopted by on-call engineers for faster recovery</li>
+                <li>Onboarded 3 new hires, ramping them on service architecture and on-call responsibilities</li>
+              </ul>
+            </div>
+            <div class="role">
+              <div class="job-head">
+                <div>
+                  <h4>Software Engineer</h4>
+                  <p class="org">Redmond, USA</p>
+                </div>
+                <span class="dates">Jul 2022 – Jun 2023</span>
+              </div>
+              <ul class="bullets">
+                <li>Developed and maintained Identity Protection Services features serving <strong>42.6M+ customers at 99.99% availability</strong></li>
+                <li>Reduced abnormal empty IP location detection time from <strong>120 to 45 mins</strong> by creating Geneva metrics and updating monitor logic</li>
+                <li>Developed Live Site Manager (LSM) jobs in Geneva Actions to expedite data uploads and runtime config changes, reducing issue mitigation time by <strong>~70% (16 hrs to 4.5 hrs)</strong> and limiting customer impact during live site incidents</li>
+                <li>Delivered 4 repair items in a cross-team effort to harden service resiliency after a Sev 1 incident</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="card">
+          <div class="job-head">
+            <div>
+              <h3>Implementation Consultant <span class="org"><em>(Software Development)</em></span></h3>
+              <p class="org"><a href="https://www.edifecs.com/" target="_blank" rel="noopener noreferrer">Edifecs</a> · Bellevue, USA</p>
+            </div>
+            <span class="dates">May 2021 – Jun 2022</span>
+          </div>
+          <ul class="bullets">
+            <li>Built validation, transformation and conversion features in XEngine, Edifecs' transaction processing engine</li>
+            <li>Developed APIs and DRL rules for Encounter Management of insurance claims, deploying through Azure Pipelines CI/CD</li>
+          </ul>
+        </li>
+
+        <li class="card">
+          <div class="job-head">
+            <div>
+              <h3>Graduate Research Assistant</h3>
+              <p class="org"><a href="https://apps.missouristate.edu/computerscience/MuSyC/" target="_blank" rel="noopener noreferrer">MuSyC Lab</a> · Missouri State University</p>
+            </div>
+            <span class="dates">Aug 2018 – Apr 2021</span>
+          </div>
+          <ul class="bullets">
+            <li>Built a source code recommendation tool (Python, Flask) with query reformulation requiring no crowd-sourced metadata</li>
+            <li>Developed a source code summarizer using an unsupervised natural language processing method</li>
+            <li><strong>Publication:</strong> <a href="https://ieeexplore.ieee.org/abstract/document/9202820/" target="_blank" rel="noopener noreferrer">SoCeR: A New Source Code Recommendation Technique for Code Reuse (IEEE COMPSAC 2020)</a></li>
+          </ul>
+        </li>
+
+        <li class="card">
+          <div class="job-head">
+            <div>
+              <h3>Software Engineer</h3>
+              <p class="org"><a href="http://www.synesisit.com.bd/" target="_blank" rel="noopener noreferrer">Synesis IT Limited</a> · Bangladesh</p>
+            </div>
+            <span class="dates">May 2016 – Jul 2018</span>
+          </div>
+          <ul class="bullets">
+            <li>Prototyped <strong>~250M biometric records</strong> into a centralized API system for SIM operations, ensuring <strong>500 TPS</strong> via PL/SQL stored procedures with Spring JPA, Hibernate and REST APIs</li>
+            <li>Developed management software for ~10k employees, migrating <strong>~110M population census records</strong> from a legacy system using .NET and Entity Framework</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section id="projects" class="reveal">
+      <div class="section-label"><span class="num">03</span><h2>Projects — AI/LLM &amp; Research</h2></div>
+
+      <div class="group">
+        <h3 class="group-title">AI / LLM</h3>
+        <div class="projects">
+          <article class="card project">
+            <div class="job-head">
+              <h3>Interview Coach</h3>
+              <span class="dates">Jun 2025 – Aug 2025</span>
+            </div>
+            <p>A full-stack, AI-powered system-design interview practice platform, delivering multi-turn conversational evaluation with structured, rubric-validated feedback.</p>
+            <ul class="bullets">
+              <li>Designed rate limiting at three levels (edge, per session and a daily budget) to keep running costs near zero</li>
+              <li>Deployed on Vercel and verified live behavior, including state persistence and rate limiting under real traffic</li>
+            </ul>
+            <ul class="tags" aria-label="Tech stack">
+              <li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Groq LLM</li><li>Vercel</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-btn" href="https://interview-coach-zeta-indol.vercel.app" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+                Live demo
+              </a>
+            </div>
+          </article>
+          <!-- Agentic RAG project goes here when ready -->
+        </div>
+      </div>
+
+      <div class="group">
+        <h3 class="group-title">Research</h3>
+        <div class="projects">
+          <article class="card project">
+            <div class="job-head">
+              <h3>SoCeR: Source Code Recommendation &amp; Summarization</h3>
+              <span class="dates">IEEE COMPSAC 2020</span>
+            </div>
+            <p>An unsupervised NLP-based source code recommendation system that promotes secure code reuse and reduces vulnerabilities from ad-hoc copy-paste. It searches and summarizes source code and suggests reformulated queries, without needing crowd-sourced metadata.</p>
+            <ul class="tags" aria-label="Tech stack">
+              <li>Python</li><li>Flask</li><li>NLP</li><li>Information Retrieval</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-btn" href="https://ieeexplore.ieee.org/abstract/document/9202820/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
+                Paper
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="reveal">
+      <div class="section-label"><span class="num">04</span><h2>Skills</h2></div>
+      <div class="skills">
+        <div class="card">
+          <h3>Languages</h3>
+          <ul class="tags"><li>Python</li><li>Java</li><li>Scala</li><li>C#</li><li>JavaScript</li><li>TypeScript</li><li>C++</li></ul>
+        </div>
+        <div class="card">
+          <h3>Cloud &amp; Backend (Azure / AWS)</h3>
+          <ul class="tags"><li>Azure DevOps</li><li>Azure Synapse</li><li>PySpark</li><li>Azure Cosmos DB</li><li>Azure Cache for Redis</li><li>Azure Monitor</li><li>Azure Managed Grafana</li><li>Azure Event Hubs</li><li>AWS (S3, EC2)</li><li>RESTful APIs</li></ul>
+        </div>
+        <div class="card">
+          <h3>Frameworks &amp; Tools</h3>
+          <ul class="tags"><li>Spring Boot</li><li>.NET</li><li>Flask</li><li>Django</li><li>React</li><li>Next.js</li><li>MySQL</li><li>Docker</li><li>Git</li><li>Pandas</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="reveal">
+      <div class="section-label"><span class="num">05</span><h2>Education</h2></div>
+      <div class="edu">
+        <div class="card">
+          <div class="job-head">
+            <h3>Missouri State University</h3>
+            <span class="dates">Aug 2018 – May 2020</span>
+          </div>
+          <p>M.S. in Computer Science · Springfield, USA</p>
+          <p>Research focus: secure code reuse using natural language processing</p>
+        </div>
+        <div class="card">
+          <div class="job-head">
+            <h3>Bangladesh University of Engineering &amp; Technology (BUET)</h3>
+            <span class="dates">Feb 2011 – Mar 2016</span>
+          </div>
+          <p>B.Sc. in Computer Science and Engineering · Bangladesh</p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="card cta reveal">
+      <h2>Let's work together</h2>
+      <p>I'm open to backend and full-stack software engineering roles in Canada. The fastest way to reach me is by email.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:sonet.mics@gmail.com">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/mazhar-sonet/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn" href="assets/Mazhar-Resume.pdf" download="Md_Mazharul_Islam_Resume.pdf">Resume</a>
+      </div>
+    </div>
+    <p class="copy">© <span id="year"></span> Md Mazharul Islam</p>
+  </footer>
 </div>
-<footer>© <span id="year"></span> Md Mazharul Islam · Built for GitHub Pages</footer>
+
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
-const sections=document.querySelectorAll('main section[id]');
+
+// Theme toggle: flips between light and dark, starting from whatever is showing now
+const root=document.documentElement;
+const darkQuery=window.matchMedia('(prefers-color-scheme: dark)');
+const isDark=()=>root.dataset.theme?root.dataset.theme==='dark':darkQuery.matches;
+document.getElementById('themeToggle').addEventListener('click',()=>{
+  const next=isDark()?'light':'dark';
+  root.dataset.theme=next;
+  try{localStorage.setItem('theme',next);}catch(e){}
+});
+
+// Highlight the nav link for the section in view: the last section whose top
+// has passed 35% of the viewport, or the last one once the page bottom is reached
+const sections=Array.from(document.querySelectorAll('main section[id]'));
 const navLinks=Array.from(document.querySelectorAll('#sideNav a'));
-const byId=id=>navLinks.find(a=>a.getAttribute('href')===`#${id}`);
-const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{const link=byId(entry.target.id||'');if(!link)return;if(entry.isIntersecting){navLinks.forEach(a=>a.classList.remove('active'));link.classList.add('active');}});},{rootMargin:'-40% 0px -55% 0px',threshold:0.1});
-sections.forEach(sec=>observer.observe(sec));
-navLinks.forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const id=a.getAttribute('href').slice(1);const target=document.getElementById(id);if(target){target.scrollIntoView({behavior:'smooth',block:'start'});target.classList.add('highlighted');setTimeout(()=>target.classList.remove('highlighted'),2000);}});});
+let current='';
+function updateActive(){
+  const atBottom=window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4;
+  let active=sections[0];
+  if(atBottom)active=sections[sections.length-1];
+  else sections.forEach(sec=>{if(sec.getBoundingClientRect().top<=window.innerHeight*.35)active=sec;});
+  if(active.id===current)return;
+  current=active.id;
+  navLinks.forEach(a=>{const on=a.getAttribute('href')===`#${current}`;a.classList.toggle('active',on);if(on){a.setAttribute('aria-current','true');const ul=a.closest('ul');if(ul.scrollWidth>ul.clientWidth)ul.scrollTo({left:a.offsetLeft-(ul.clientWidth-a.offsetWidth)/2,behavior:'smooth'});}else a.removeAttribute('aria-current');});
+}
+let ticking=false;
+window.addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(()=>{ticking=false;updateActive();});}},{passive:true});
+window.addEventListener('resize',updateActive);
+updateActive();
+
+// Fade sections in as they enter the viewport
+const reveal=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in');reveal.unobserve(entry.target);}});},{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>reveal.observe(el));
 </script>
 </body>
 </html>
