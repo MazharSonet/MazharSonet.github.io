@@ -21,6 +21,7 @@ The layout works on phones, tablets and desktops, and supports light and dark mo
 | `index.html` | The whole site: markup, styles and scripts in one file |
 | `assets/Mazhar-Resume.pdf` | Resume linked from the Download Resume button |
 | `assets/profile.jpg` | Profile photo (480×480) |
+| `sitemap.xml`, `robots.txt` | Help search engines find and crawl the site. Update `<lastmod>` in the sitemap after big content changes |
 
 There's no build step, and the site is served directly by GitHub Pages from the `main` branch.
 
