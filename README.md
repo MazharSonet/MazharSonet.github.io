@@ -1,4 +1,4 @@
-# Md Mazharul Islam — Portfolio
+# Md Mazharul Islam | Portfolio
 
 Personal portfolio site for Md Mazharul Islam, Software Engineer (Backend, Distributed Systems & Full-Stack) based in Vancouver, BC.
 
